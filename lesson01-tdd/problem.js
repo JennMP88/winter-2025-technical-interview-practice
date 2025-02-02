@@ -12,6 +12,25 @@
  */
 function isPalindrome(str) {
   // your code here
+  str = str.toLowerCase(); 
+  let left = 0, right = str.length - 1;
+  const numLetters = /[a-z0-9]/; 
+
+  while (left < right) {
+      // move left pointer forward
+      while (left < right && !str[left].match(numLetters)) left++;
+      // move right pointer to prev
+      while (left < right && !str[right].match(numLetters)) right--;
+
+     //if not matching no bueno  
+      if (str[left] !== str[right]) {
+          return false;
+      }
+
+      left++;
+      right--;
+  }
+  return true;
 }
 
 module.exports = isPalindrome;
