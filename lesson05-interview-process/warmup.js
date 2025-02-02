@@ -8,11 +8,18 @@ function reverseString(str) {
 console.log(reverseString("Hello, World!"));
 // Expected Output: "!dlroW ,olleH"
 
-function capitalizeWords(str) {}
-
+function capitalizeWords(str) {
+  let myStr=str[0].toUpperCase()
+  for(let i=1;i<str.length-1;i++){
+    if(str[i-1]==" "){
+      myStr+=str[i].toUpperCase()
+    }
+    else myStr+=str[i]
+  }
+  return myStr
+}
 console.log(capitalizeWords("hello, world!"));
 // Expected Output: 'Hello, World!'
-
 console.log(capitalizeWords("javascript is awesome"));
 // Expected Output: 'Javascript Is Awesome'
 
