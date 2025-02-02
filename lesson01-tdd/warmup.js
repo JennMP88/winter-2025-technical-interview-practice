@@ -3,6 +3,16 @@
 // 5 => '*****'
 // 12 => '************'
 // 3 => "***"
+function stars(star){
+  let str=""
+
+  for(let i=0;i<star;i++){
+    str+="*"
+  }
+  return str
+}
+console.log(stars(2))
+console.log(stars(8))
 
 // 2. Given an integer, n, between 3 and 100,
 // return a line n characters long where the first and last character are '*' and all the middle characters are a space.
