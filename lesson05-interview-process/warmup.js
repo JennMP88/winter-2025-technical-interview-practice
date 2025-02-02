@@ -1,5 +1,10 @@
-function reverseString(str) {}
-
+function reverseString(str) {
+  newstring=""
+  for(let i=str.length-1;i>=0;i--){
+    newstring+=str[i]
+  }
+  return newstring
+}
 console.log(reverseString("Hello, World!"));
 // Expected Output: "!dlroW ,olleH"
 
