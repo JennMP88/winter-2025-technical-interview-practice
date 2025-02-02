@@ -20,6 +20,19 @@ console.log(stars(8))
 // 5 => '*   *'
 // 12 => '*          *'
 
+ 
+function spacedLine(n){  
+  if (n<3 || n>100) {return "outer limits num must be between 3 and 10"}
+
+  let str = "*"; 
+  str += " ".repeat(n - 2); 
+  str += "*";
+  
+  return str
+}
+console.log(spacedLine(5))
+console.log(spacedLine(1))
+
 // 3. Given two integers, n and m, create n lines of m characters. The first and last line should be made of all '*' and all the middle lines should start and end with '*' and have all spaces in the middle
 
 // 5,5 => *****
