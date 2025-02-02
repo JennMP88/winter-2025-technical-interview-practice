@@ -41,4 +41,19 @@ console.log(spacedLine(1))
 //        *   *
 //        *****
 
+function starLines(n,m){
+  let box = new Array(n);
+
+  // first and last line
+  box[0] = "*".repeat(m);
+  box[n-1]="*".repeat(m);
+ 
+  // middle
+  for(let i=1;i<n-1;i++){
+    box[i]= "*" + " ".repeat(m-2) + "*"
+  }
+  return box.join("\n")
+}
+console.log(starLines(5,6))
+
 // Console.log the result of each of the above functions to test them. Run your file with node warmup.js and check the terminal for the correct output.
