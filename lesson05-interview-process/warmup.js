@@ -23,10 +23,23 @@ console.log(capitalizeWords("hello, world!"));
 console.log(capitalizeWords("javascript is awesome"));
 // Expected Output: 'Javascript Is Awesome'
 
-function countVowels(str) {}
 
+function countVowels(str) {
+  let counter=0
+  // look through each individual character
+    // if a e i o u increase counter 1
+      // else continue
+  str.toLowerCase()
+  let vowels= /[aeiou]/
+
+  for(let i=0;i<str.length;i++){
+    if(str[i].match(vowels)){
+      counter++
+    }
+  }
+  return counter
+}
 console.log(countVowels("hello"));
 // Expected Output: 2
-
 console.log(countVowels("programming"));
 // Expected Output: 3
