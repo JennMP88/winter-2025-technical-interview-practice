@@ -1,5 +1,8 @@
 // 1. given a string with three characters, return the second character
-
+function threeChar(str){
+  return str.slice(0,2)
+}
+console.log(threeChar('cha'))
 // 2. get the second and third char from a string. the string will always have atleast three characters
 
 // 'cat' => 'at'
