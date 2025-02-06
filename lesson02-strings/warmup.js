@@ -2,7 +2,7 @@
 function threeChar(str){
   return str.slice(0,2)
 }
-console.log(threeChar('cha'))
+console.log(threeChar('cha')) //ch
 // 2. get the second and third char from a string. the string will always have atleast three characters
 
 // 'cat' => 'at'
@@ -10,7 +10,7 @@ console.log(threeChar('cha'))
 function char2_3(str){
   return str.slice(1)
 }
-console.log(char2_3('cha'))
+console.log(char2_3('cha')) //ha
 // 3. Given a word with 5 letters, return the second through 5th letter
 
 function getSecondThroughFifthLetter (word){
@@ -25,6 +25,11 @@ console.log(getSecondThroughFifthLetter("butter")) //utter
 
 // slice is a ?? method: array and also a string method
 // splice is a array method
+function stringCut(str,n){
+  return str.slice(1,n)
+}
+console.log(stringCut("schoolbus",5)) //choo
+console.log(stringCut("telephone",6)) //eleph
 
 // 5. Given an array of booleans, return an arrray of only false elements
 

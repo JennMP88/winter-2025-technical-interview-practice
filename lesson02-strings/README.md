@@ -22,7 +22,7 @@ Today we'll be looking at a data type called "string." Why does data have differ
 
 3. Common String Methods
    - charAt()
-   - substring()
+   - substring()  
    - slice()
    - indexOf()
    - replace()
