@@ -13,9 +13,10 @@ function char2_3(str){
 console.log(char2_3('cha'))
 // 3. Given a word with 5 letters, return the second through 5th letter
 
-// function getSecondThroughFifthLetter (word){
-//   return word.slice(1);
-// }
+function getSecondThroughFifthLetter (word){
+  return word.slice(1,word.length);
+}
+console.log(getSecondThroughFifthLetter("butter")) //utter
 
 // 4. given a string and a number called N, return the second through the Nth character
 
