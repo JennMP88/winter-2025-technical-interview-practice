@@ -7,7 +7,10 @@ console.log(threeChar('cha'))
 
 // 'cat' => 'at'
 // 'robbed' => 'ob'
-
+function char2_3(str){
+  return str.slice(1)
+}
+console.log(char2_3('cha'))
 // 3. Given a word with 5 letters, return the second through 5th letter
 
 // function getSecondThroughFifthLetter (word){
