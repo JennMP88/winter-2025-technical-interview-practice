@@ -34,6 +34,16 @@ console.log(stringCut("telephone",6)) //eleph
 // 5. Given an array of booleans, return an arrray of only false elements
 
 // [true, true, false, true , false] => [false, false]
+function checkFalse(arr){
+  let falseArr=[]
+  for(let i=0;i<arr.length;i++){
+    if(!arr[i]){
+      falseArr.push(arr[i])
+    }
+  }
+  return falseArr
+}
+console.log(checkFalse([true, true, false, true , false])) // [false, false]
 
 // 6. given a string with two words, put ' the ' between the words and return the string
 
