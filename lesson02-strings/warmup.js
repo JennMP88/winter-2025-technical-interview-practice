@@ -51,7 +51,13 @@ console.log(checkFalse([true, true, false, true , false])) // [false, false]
 // 'for real' => 'for the real'
 // 'jim john' => 'jim the john'
 // 'to house' => 'to the house'
-
+function insertThe(str){
+  str=str.split(" ")
+  str.splice(1,0,"the")  
+  return str.join(" ")
+}
+console.log(insertThe("to beach"))
+console.log(insertThe("for real"))
 // 7.  given two numbers, price and discount, return the price after the discount is applied
 
 // price is 100 and discount is 15
