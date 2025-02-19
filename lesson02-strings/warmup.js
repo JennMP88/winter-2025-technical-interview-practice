@@ -63,7 +63,11 @@ console.log(insertThe("for real"))
 // price is 100 and discount is 15
 
 // 100, 15 => 85
-
 // 70, 3 => 67.9
+function pricedDiscount(price,discount){
+  return price - (price * (discount / 100));
+}
+console.log(pricedDiscount(100,15)) //85
+console.log(pricedDiscount(70,3)) //67.9
 
 // Console.log each of your answers with the test cases provided. Attempt to write each one with TDD.
