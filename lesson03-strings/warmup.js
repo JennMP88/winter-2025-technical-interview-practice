@@ -36,10 +36,10 @@ function isAnagram(str1,str2){
 
   return true;
 }
-console.log(isAnagram("aba", "baa")) //true
-console.log(isAnagram("hub", "huc")) //false
-console.log(isAnagram("ABA", "aba")) //false
-console.log(isAnagram("aa bb","a b a b")) //true
+// console.log(isAnagram("aba", "baa")) //true
+// console.log(isAnagram("hub", "huc")) //false
+// console.log(isAnagram("ABA", "aba")) //false
+// console.log(isAnagram("aa bb","a b a b")) //true
 
 // 2. Solve the same problem as above but do not sort the strings. What is the difference in time complexity when we don't sort the strings?
 
@@ -51,8 +51,47 @@ console.log(isAnagram("aa bb","a b a b")) //true
 // "a&!#bb", "aaabbbb" => false
 //  "a&!#bb", "abb" => true
 
-// 3. Given two strings, how many characters would need to be added or replacedin order to make them anagrams
+// ----------------same solution as 1. how do i solve with just strings?
+// ----------------double loop?
 
-// "abad", "abcd" => 1
+
+// 3. Given two strings, how many characters would need to be added or replaced in order to make them anagrams
+
+// "abad", "abcd" => 2
 //  "aabb", "baba" => 0
 // "aaaazzzz", "bbbbwwww" => 8
+// "abad", "abcd" => 2
+//  "aabb", "baba" => 0
+// "aaaazzzz", "bbbbwwww" => 8
+function countToAnagram(str1,str2){
+  let i=0;
+  let j=0;
+  
+  
+  let obj1={}
+  let obj2={}
+
+  // str1
+  for(let i=0;i<str1.length;i++){
+    obj1[str1[i]] = (obj1[str1[i]] || 0) + 1
+  }
+
+  // str2
+  for(let j=0;j<str2.length;j++){
+    obj2[str2[j]] = (obj2[str2[j]] || 0) + 1
+  }
+
+  // loop through obj1 and obj2 if the keys are not equal
+  let count=0
+  for(key in obj1){
+    if(obj1[key] !== obj2[key]){
+      count+=1
+      // console.log(obj1[key],"obj key")
+    }
+  }
+  return count
+}
+
+console.log(countToAnagram("abad", "abcd"))//1 
+console.log(countToAnagram( "aabb", "baba"))//0
+console.log(countToAnagram("aaaazzzz", "bbbbwwww"))//8 
