@@ -60,5 +60,5 @@ function stringMatching(text, pattern) {
   
     return arr;
   }
-console.log(stringMatching("ababcababcabc", "abc"));
+
 module.exports = stringMatching;

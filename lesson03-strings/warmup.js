@@ -67,7 +67,6 @@ function countToAnagram(str1,str2){
   let i=0;
   let j=0;
   
-  
   let obj1={}
   let obj2={}
 
@@ -92,6 +91,6 @@ function countToAnagram(str1,str2){
   return count
 }
 
-console.log(countToAnagram("abad", "abcd"))//1 
+console.log(countToAnagram("abad", "abcd"))//1 --->2? replaces 1?
 console.log(countToAnagram( "aabb", "baba"))//0
 console.log(countToAnagram("aaaazzzz", "bbbbwwww"))//8 
